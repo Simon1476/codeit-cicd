@@ -1,4 +1,5 @@
 import AnimateSpin from "@/components/AnimateSpin";
+import Button from "@/components/Button";
 import ReviewCard from "@/components/ReviewCard";
 import Image from "next/image";
 
@@ -12,6 +13,7 @@ export default function Home() {
               <h1 className="text-4xl font-medium tracking-tight text-gray-900">
                 Invest at the perfect time
               </h1>
+              <Button />
               <p className="mt-6 text-lg text-gray-600">
                 By leveraging insights from our network of industry insiders,
                 you’ll know exactly when to buy to maximize profit, and exactly
