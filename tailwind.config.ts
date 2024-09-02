@@ -13,6 +13,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        marquee: "marquee 38080ms linear infinite",
+        "fade-in": "fade-in .5s linear forwards",
+        "spin-slow": "spin 10s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "100%": { transform: "translateY(-50%)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
     },
   },
   plugins: [],
