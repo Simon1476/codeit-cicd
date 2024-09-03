@@ -10,9 +10,6 @@ describe("shuffle", () => {
 
     // 배열의 모든 요소가 원본 배열에 있어야 한다
     expect(result.sort()).toEqual(input.sort());
-
-    // 결과가 원본 배열과 동일하지 않을 가능성을 체크 (단일 테스트 케이스이므로 100% 확률은 아님)
-    expect(result).not.toEqual(input);
   });
 
   test("should return an empty array when input is an empty array", () => {
