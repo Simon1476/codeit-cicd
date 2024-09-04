@@ -6,10 +6,16 @@ executors:
   default:
     docker:
       - image: cimg/node:18.17.0-browsers
-      
-workflows:
-  build:
-    jobs:
+
+jobs:
+  cypress-run:
+    executor: default
+    steps:
       - cypress/run:
           start-command: 'npm run start'
 
+workflows:
+  version: 2
+  build:
+    jobs:
+      - cypress-run
