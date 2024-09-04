@@ -15,22 +15,9 @@ executors:
           The version of Node to run your tests with.
         type: string
 
-jobs:
-  build:
-    description: |
-      A job to run Cypress end-to-end tests in your application.
-    executor:
-      name: default
-      node-version: "18.17.0"  # 이 부분에서 Node.js 버전을 설정합니다.
-    steps:
-      - checkout
-      - cypress/install
-      - cypress/run
-
 workflows:
-  version: 2
-  build_and_test:
+  build:
     jobs:
-      - build:
-          name: Run Cypress Tests
+      - cypress/run:
           start-command: 'npm run start'
+
